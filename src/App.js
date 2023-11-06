@@ -32,7 +32,7 @@ function reducer(state, action) {
 }
 
 function App() {
-  const [isDataloaded, setIsDataloaded] = useState(false);
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
   const [data, dispatch] = useReducer(reducer, []);
   const idRef = useRef(0);
 
@@ -41,7 +41,7 @@ function App() {
       type: "INIT",
       data: mockData,
     });
-    setIsDataloaded(true);
+    setIsDataLoaded(true);
   }, []);
 
   const onCreate = (date, content, emotionId) => {
@@ -76,25 +76,25 @@ function App() {
   const mockData = [
     {
       id: "mock1",
-      date: new Date().getTime(),
+      date: new Date().getTime() - 1,
       content: "mock1",
       emotionId: 1,
     },
     {
       id: "mock2",
-      date: new Date().getTime(),
+      date: new Date().getTime() - 2,
       content: "mock2",
       emotionId: 2,
     },
     {
       id: "mock3",
-      date: new Date().getTime(),
+      date: new Date().getTime() - 3,
       content: "mock3",
       emotionId: 3,
     },
   ]
 
-  if (!isDataloaded) {
+  if (!isDataLoaded) {
     return <div>데이터를 불러오는 중입니다...</div>;
   } else {
     return (
