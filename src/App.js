@@ -99,19 +99,16 @@ function App() {
   } else {
     return (
       <DiaryStateContext.Provider value={data}>
-        <DiaryDispatchContext.Provider value={{
-          onCreate,
-          onUpdate,
-          onDelete,
-        }} />
-        <div className="App">
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/New' element={<New />} />
-            <Route path='/Diary/:id' element={<Diary />} />
-            <Route path='/Edit/:id' element={<Edit />} />
-          </Routes>
-        </div>
+        <DiaryDispatchContext.Provider value={{onCreate, onUpdate, onDelete}}>
+          <div className="App">
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/New' element={<New />} />
+              <Route path='/Diary/:id' element={<Diary />} />
+              <Route path='/Edit/:id' element={<Edit />} />
+            </Routes>
+          </div>
+        </DiaryDispatchContext.Provider>
       </DiaryStateContext.Provider>
     );
   }
