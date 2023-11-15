@@ -57,3 +57,19 @@
 .DiaryItem .button_section {
   min-width: 70px;
 }
+
+@media (max-width:768px) {
+  .DiaryItem .img_section {
+    min-width: 100px;
+    height: 70px;
+  }
+
+  .DiaryItem .info_section {
+    max-width: 150px;
+  }
+
+  .DiaryItem .info_section .content_wrapper {
+    font-size: 17px;
+    padding-right: 10px;
+  }
+}

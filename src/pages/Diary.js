@@ -19,7 +19,7 @@ const Diary = () => {
   };
 
   useEffect(() => {
-    setPageTitle(`${id}번 일기`);
+    setPageTitle(`${parseInt(id, 10) + 1}번 일기`);
   }, []);
 
   if (!data) {

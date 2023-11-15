@@ -18,6 +18,7 @@
   cursor: pointer;
   font-family: "Nanum Pen Script";
   font-size: 18px;
+  outline: none;
 }
 
 .DiaryList .menu_wrapper .right_col {

@@ -13,12 +13,24 @@
   color: black;
 }
 
+.Button_default:hover {
+  background-color: #dbdbdb;
+}
+
 .Button_positive {
   background-color: #64c964;
   color: white;
 }
 
+.Button_positive:hover {
+  background-color: #5dbb5d;
+}
+
 .Button_negative {
   background-color: #fd565f;
   color: white;
+}
+
+.Button_negative:hover {
+  background-color: #f8424b;
 }
